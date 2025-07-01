@@ -43,12 +43,13 @@
     const selectedDecade = document.querySelector('input[name="decade"]:checked');
     const selectedGenre = document.querySelector('input[name="genre"]:checked');
     const displayText = document.getElementById("displayText");
+    const img1 = document.getElementById( "img1" ).style.display = "inline";}
     
     if (!selectedDecade || !selectedGenre) {
   		displayText.innerHTML = 'Please select both a decade and a genre.';} 
       else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
     		displayText.innerHTML = '1';
-        document.getElementById( "img1" ).style.display = "inline";}
+        img1;}
       else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
     		displayText.innerHTML = '2';}
       else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
