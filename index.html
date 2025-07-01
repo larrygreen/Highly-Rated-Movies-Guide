@@ -31,7 +31,8 @@
     <button type="button" id="displayButton">Display Text</button>
   </form>
 
-  <img id="myImage" src="" alt="Image" style="display: none;">
+  <img id="selectImage" src="select_prompt.png" alt="Image" style="display: none;">
+  <img id="NinetiesActionImage" src="1990s_action.png" alt="Image" style="display: none;">
 
 </body>
 </html>
@@ -41,36 +42,36 @@
     // Get the selected radio button values
     const selectedDecade = document.querySelector('input[name="decade"]:checked');
     const selectedGenre = document.querySelector('input[name="genre"]:checked');
-    const myImage = document.getElementById("myImage");
+    const selectImage = document.getElementById("selectImage");
+    const NinetiesActionImage = document.getElementById("NinetiesActionImage");
     
 	if (!selectedDecade || !selectedGenre) {
-  	      img.src = "select_prompt.png";} 
+  	      selectImage.style.display = "inline";}
 	  else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
-    	      img.src = "1990s_action.png";}
+    	      NinetiesActionImage.style.display = "inline";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
-    	      img.src = "select_prompt.png";}
+    	      selectImage.style.display = "inline";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
-    	      img.src = "1990s_action.png";}
+    	      NinetiesActionImage.style.display = "inline";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "drama") {
-    	      img.src = "select_prompt.png";}
+    	      selectImage.style.display = "inline";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "action") {
-    	      img.src = "1990s_action.png";}
+    	      NinetiesActionImage.style.display = "inline";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "adventure") {
-    	      img.src = "select_prompt.png";}
+    	      selectImage.style.display = "inline";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "comedy") {
-    	      img.src = "1990s_action.png";}
+    	      NinetiesActionImage.style.display = "inline";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "drama") {
-    	      img.src = "select_prompt.png";}
+    	      selectImage.style.display = "inline";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "action") {
-    	      img.src = "1990s_action.png";}
+    	      NinetiesActionImage.style.display = "inline";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "adventure") {
-    	      img.src = "select_prompt.png";}
+    	      selectImage.style.display = "inline";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "comedy") {
-    	      img.src = "1990s_action.png";}
+    	      NinetiesActionImage.style.display = "inline";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "drama") {
-    	      img.src = "select_prompt.png";}
+    	      selectImage.style.display = "inline";}
 
-	img.style.display = "block";  
   
   });
 
