@@ -31,7 +31,7 @@
     <button type="button" id="displayButton">Display Text</button>
   </form>
 
-  <div id="displayText"></div>
+  <img id="myImage" src="" alt="Image" style="display: none;">
 
 </body>
 </html>
@@ -41,34 +41,36 @@
     // Get the selected radio button values
     const selectedDecade = document.querySelector('input[name="decade"]:checked');
     const selectedGenre = document.querySelector('input[name="genre"]:checked');
-    const displayText = document.getElementById("displayText");
+    const myImage = document.getElementById("myImage");
     
 	if (!selectedDecade || !selectedGenre) {
-  	      displayText.innerHTML = 'Please select both a decade and a genre.';} 
+  	      img.src = "select_prompt.png";} 
 	  else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
-    	      displayText.innerHTML = '1';}
+    	      img.src = "1990s_action.png";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
-    	      displayText.innerHTML = '2';}
+    	      img.src = "select_prompt.png";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
-    	      displayText.innerHTML = '3';}
+    	      img.src = "1990s_action.png";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "drama") {
-    	      displayText.innerHTML = '4';}
+    	      img.src = "select_prompt.png";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "action") {
-    	      displayText.innerHTML = '5';}
+    	      img.src = "1990s_action.png";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "adventure") {
-    	      displayText.innerHTML = '6';}
+    	      img.src = "select_prompt.png";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "comedy") {
-    	      displayText.innerHTML = '7';}
+    	      img.src = "1990s_action.png";}
           else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "drama") {
-    	      displayText.innerHTML = '8';}
+    	      img.src = "select_prompt.png";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "action") {
-    	      displayText.innerHTML = '9';}
+    	      img.src = "1990s_action.png";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "adventure") {
-    	      displayText.innerHTML = '10';}
+    	      img.src = "select_prompt.png";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "comedy") {
-    	      displayText.innerHTML = '11';}
+    	      img.src = "1990s_action.png";}
           else if (selectedDecade.value === "tens" && selectedGenre.value === "drama") {
-    	      displayText.innerHTML = '12';}
+    	      img.src = "select_prompt.png";}
+
+	img.style.display = "block";  
   
   });
 
