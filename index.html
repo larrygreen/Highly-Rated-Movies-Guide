@@ -34,6 +34,17 @@
   <div id="image-container">
   	<img id="selectImage" src="select_prompt.png" alt="Image" style="display: none;">
   	<img id="NinetiesActionImage" src="1990s_action.png" alt="Image" style="display: none;">
+	<img id="twoImage" src="two.png" alt="Image" style="display: none;">
+	<img id="threeImage" src="three.png" alt="Image" style="display: none;">
+	<img id="fourImage" src="four.png" alt="Image" style="display: none;">
+	<img id="fiveImage" src="five.png" alt="Image" style="display: none;">
+	<img id="sixImage" src="six.png" alt="Image" style="display: none;">
+	<img id="sevenImage" src="seven.png" alt="Image" style="display: none;">
+	<img id="eightImage" src="eight.png" alt="Image" style="display: none;">
+	<img id="nineImage" src="nine.png" alt="Image" style="display: none;">
+	<img id="tenImage" src="ten.png" alt="Image" style="display: none;">
+	<img id="elevenImage" src="eleven.png" alt="Image" style="display: none;">
+	<img id="twelveImage" src="twelve.png" alt="Image" style="display: none;">
   </div>
 	  
 </body>
@@ -46,14 +57,25 @@
     const selectedGenre = document.querySelector('input[name="genre"]:checked');
     const selectImage = document.getElementById("selectImage");
     const NinetiesActionImage = document.getElementById("NinetiesActionImage");
-    
+    const twoImage = document.getElementById("twoImage");
+    const threeImage = document.getElementById("threeImage");
+    const fourImage = document.getElementById("fourImage");
+    const fiveImage = document.getElementById("fiveImage");
+    const sixImage = document.getElementById("sixImage");
+    const sevenImage = document.getElementById("sevenImage");
+    const eightImage = document.getElementById("eightImage");
+    const nineImage = document.getElementById("nineImage");
+    const tenImage = document.getElementById("tenImage");
+    const elevenImage = document.getElementById("elevenImage");
+    const twelveImage = document.getElementById("twelveImage");	  
 	if (!selectedDecade || !selectedGenre) {
   	      selectImage.style.display = "inline";}
 	  else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
     	      NinetiesActionImage.style.display = "inline";
 	      selectImage.style.display = "none";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
-    	      selectImage.style.display = "inline";}
+    	      twoImage.style.display = "inline";
+	      NinetiesActionImage.style.display = "none";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
     	      NinetiesActionImage.style.display = "inline";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "drama") {
