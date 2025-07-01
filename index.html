@@ -43,16 +43,36 @@
     const selectedGenre = document.querySelector('input[name="genre"]:checked');
 
     const displayText = document.getElementById("displayText");
+    
+    
+    const myCheckbox = document.querySelector('.myCheckBox'); // Select the checkbox element
 
-    // Check if both radio buttons are selected
-    if (selectedDecade && selectedGenre) {
-      const decadeValue = selectedDecade.value;
-      const genreValue = selectedGenre.value;
-
-      // Display text based on the selected values
-      displayText.innerHTML = `You selected ${decadeValue} and ${genreValue}.`;
-    } else {
-      displayText.innerHTML = "Please select both a decade and a genre.";
-    }
+	if (!selectedDecade || !selectedGenre) {
+  		displayText.innerHTML = 'Please select both a decade and a genre.';} 
+	    else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
+    	displayText.innerHTML = '1';}
+      else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
+    	displayText.innerHTML = '2';}
+      else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
+    	displayText.innerHTML = '3';}
+      else if (selectedDecade.value === "nineties" && selectedGenre.value === "drama") {
+    	displayText.innerHTML = '4';}
+      else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "action") {
+    	displayText.innerHTML = '5';}
+      else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "adventure") {
+    	displayText.innerHTML = '6';}
+      else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "comedy") {
+    	displayText.innerHTML = '7';}
+      else if (selectedDecade.value === "two_thousands" && selectedGenre.value === "drama") {
+    	displayText.innerHTML = '8';}
+      else if (selectedDecade.value === "tens" && selectedGenre.value === "action") {
+    	displayText.innerHTML = '9';}
+      else if (selectedDecade.value === "tens" && selectedGenre.value === "adventure") {
+    	displayText.innerHTML = '10';}
+      else if (selectedDecade.value === "tens" && selectedGenre.value === "comedy") {
+    	displayText.innerHTML = '11';}
+      else if (selectedDecade.value === "tens" && selectedGenre.value === "drama") {
+    	displayText.innerHTML = '12';}
+  
   });
 </script>
