@@ -1,5 +1,58 @@
-<h1>Highly Rated Movies Guide</h1>
-<p>This was created to help movie lovers find a high quality film to watch.<br>
-  All of the films listed have an IMDb rating of 7.5 or higher. This is not a definitve collection.<br>
-  Some films with a rating of 7.5 or higher on IMDb have not been included</p>
-<p>Select a genre from your preferred decade to see a list of highly rated films.</p>
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <h1>Highly Rated Movies Guide</h1>
+  <p>This was created to help movie lovers find a high quality film to watch.<br>
+    All of the films listed have an IMDb rating of 7.5 or higher. This is not a definitve collection.<br>
+    Some films with a rating of 7.5 or higher on IMDb have not been included</p>
+  <p>Select a genre from your preferred decade to see a list of highly rated films.</p>
+  <h1>Choose your options:</h1>
+
+  <form id="myForm">
+    <p>Select a decade:</p>
+    <input type="radio" id="nineties" name="decade" value="nineties">
+    <label for="nineties">1990-1999</label><br>
+    <input type="radio" id="two_thousands" name="decade" value="two_thousands">
+    <label for="two_thousands">2000-2009</label><br>
+    <input type="radio" id="tens" name="decade" value="tens">
+    <label for="tens">2010-2019</label><br><br>
+
+    <p>Select your favorite fruit:</p>
+    <input type="radio" id="action" name="genre" value="action">
+    <label for="action">Action</label><br>
+    <input type="radio" id="adventure" name="genre" value="adventure">
+    <label for="adventure">Adventure</label><br>
+    <input type="radio" id="comedy" name="genre" value="comedy">
+    <label for="comedy">Comedy</label><br>
+    <input type="radio" id="drama" name="genre" value="drama">
+    <label for="drama">Drama</label><br><br>
+
+    <button type="button" id="displayButton">Display Text</button>
+  </form>
+
+  <div id="displayText"></div>
+
+</body>
+</html>
+
+<script>
+  document.getElementById("displayButton").addEventListener("click", function() {
+    // Get the selected radio button values
+    const selectedDecade = document.querySelector('input[name="decade"]:checked');
+    const selectedGenre = document.querySelector('input[name="genre"]:checked');
+
+    const displayText = document.getElementById("displayText");
+
+    // Check if both radio buttons are selected
+    if (selectedDecade && selectedGenre) {
+      const decadeValue = selectedDecade.value;
+      const genreValue = selectedGenre.value;
+
+      // Display text based on the selected values
+      displayText.innerHTML = `You selected ${decadeValue} and ${genreValue}.`;
+    } else {
+      displayText.innerHTML = "Please select both a decade and a genre.";
+    }
+  });
+</script>
