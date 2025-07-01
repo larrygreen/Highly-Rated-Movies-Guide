@@ -33,7 +33,7 @@
 
   <div id="image-container">
   	<img id="selectImage" src="select_prompt.png" alt="Image" style="display: none;">
-  	<img id="NinetiesActionImage" src="1990s_action.png" alt="Image" style="display: none;">
+  	<img id="oneImage" src="one.png" alt="Image" style="display: none;">
 	<img id="twoImage" src="two.png" alt="Image" style="display: none;">
 	<img id="threeImage" src="three.png" alt="Image" style="display: none;">
 	<img id="fourImage" src="four.png" alt="Image" style="display: none;">
@@ -56,7 +56,7 @@
     const selectedDecade = document.querySelector('input[name="decade"]:checked');
     const selectedGenre = document.querySelector('input[name="genre"]:checked');
     const selectImage = document.getElementById("selectImage");
-    const NinetiesActionImage = document.getElementById("NinetiesActionImage");
+    const oneImage = document.getElementById("oneImage");
     const twoImage = document.getElementById("twoImage");
     const threeImage = document.getElementById("threeImage");
     const fourImage = document.getElementById("fourImage");
@@ -71,11 +71,11 @@
 	if (!selectedDecade || !selectedGenre) {
   	      selectImage.style.display = "inline";}
 	  else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
-    	      NinetiesActionImage.style.display = "inline";
+    	      oneImage.style.display = "inline";
 	      selectImage.style.display = "none";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
     	      twoImage.style.display = "inline";
-	      NinetiesActionImage.style.display = "none";}
+	      oneImage.style.display = "none";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
     	      threeImage.style.display = "inline";
 	      twoImage.style.display = "none";}
