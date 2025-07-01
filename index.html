@@ -32,6 +32,7 @@
   </form>
 
   <div id="displayText"></div>
+  <img style="display:none" id="img1" src="1990s_action.png" alt="1990s Action"/>
 
 </body>
 </html>
@@ -46,7 +47,8 @@
     if (!selectedDecade || !selectedGenre) {
   		displayText.innerHTML = 'Please select both a decade and a genre.';} 
       else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
-    		displayText.innerHTML = '1';}
+    		displayText.innerHTML = '1';
+        document.getElementById( "img1" ).style.display = "inline";}
       else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
     		displayText.innerHTML = '2';}
       else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
