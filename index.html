@@ -50,7 +50,8 @@
 	if (!selectedDecade || !selectedGenre) {
   	      selectImage.style.display = "inline";}
 	  else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
-    	      NinetiesActionImage.style.display = "inline";}
+    	      NinetiesActionImage.style.display = "inline";
+	      selectImage.style.display = "none";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "adventure") {
     	      selectImage.style.display = "inline";}
           else if (selectedDecade.value === "nineties" && selectedGenre.value === "comedy") {
