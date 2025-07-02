@@ -46,7 +46,7 @@
     <button type="button" id="displayButton">Display Text</button>
   </form>
 
-  <img id="selectImage" src="select_prompt.png" alt="Image" style="display: none;">	
+  <div id="displayText"></div>	
   <div id="image-container">
   	<img id="oneImage" src="one.png" alt="Image" style="display: none;">
 	<img id="twoImage" src="two.png" alt="Image" style="display: none;">
@@ -70,7 +70,7 @@
     // Get the selected radio button values
     const selectedDecade = document.querySelector('input[name="decade"]:checked');
     const selectedGenre = document.querySelector('input[name="genre"]:checked');
-    const selectImage = document.getElementById("selectImage");
+    const displayText = document.getElementById("displayText");
     const oneImage = document.getElementById("oneImage");
     const twoImage = document.getElementById("twoImage");
     const threeImage = document.getElementById("threeImage");
@@ -85,10 +85,10 @@
     const twelveImage = document.getElementById("twelveImage");		  
 
 	if (!selectedDecade || !selectedGenre) {
-  	      selectImage.style.display = "inline";}
+  	      displayText.innerHTML = "Please select both a decade and a genre.";
 	  else if (selectedDecade.value === "nineties" && selectedGenre.value === "action") {
     	      oneImage.style.display = "inline";
-	      selectImage.style.display = "none";
+	      displayText.innerHTML = "";
 	      twoImage.style.display = "none";
 	      threeImage.style.display = "none";
 	      fourImage.style.display = "none";
