@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Highly Rated Movies</title>
+  <style>
+    .radio-group {
+      display: inline-block;
+      margin-right: 20px; /* Adjust spacing as needed */
+    }
+  </style>
+</head>	
 <body>
   
   <h1 style="text-align: center;">Highly Rated Movies Guide</h1>
   <p style="text-align: center;">Find a movie with an IMDb rating of 7.5 or higher.</p>
   
   <form id="myForm">
-    <p style="text-align: center;">Select a decade:</p>
-    <div style="text-align: center;">
-      <input type="radio" id="nineties" name="decade" value="nineties">
-      <label for="nineties">1990-1999</label><br>
-      <input type="radio" id="two_thousands" name="decade" value="two_thousands">
-      <label for="two_thousands">2000-2009</label><br>
-      <input type="radio" id="tens" name="decade" value="tens">
-      <label for="tens">2010-2019</label><br><br>
-    </div>   	
-    
-    <p>Select a genre:</p>
-    <input type="radio" id="action" name="genre" value="action">
-    <label for="action">Action</label><br>
-    <input type="radio" id="adventure" name="genre" value="adventure">
-    <label for="adventure">Adventure</label><br>
-    <input type="radio" id="comedy" name="genre" value="comedy">
-    <label for="comedy">Comedy</label><br>
-    <input type="radio" id="drama" name="genre" value="drama">
-    <label for="drama">Drama</label><br><br>
-
+    <div class="radio-group-container">
+      <fieldset class="radio-group">	    
+        <legend>Select a decade:</legend>
+        <input type="radio" id="nineties" name="decade" value="nineties">
+        <label for="nineties">1990-1999</label><br>
+        <input type="radio" id="two_thousands" name="decade" value="two_thousands">
+        <label for="two_thousands">2000-2009</label><br>
+        <input type="radio" id="tens" name="decade" value="tens">
+        <label for="tens">2010-2019</label><br><br>
+      </fieldset>      
+     	
+      <fieldset class="radio-group">
+        <legend>Select a genre:</legend>
+        <input type="radio" id="action" name="genre" value="action">
+        <label for="action">Action</label><br>
+        <input type="radio" id="adventure" name="genre" value="adventure">
+        <label for="adventure">Adventure</label><br>
+        <input type="radio" id="comedy" name="genre" value="comedy">
+        <label for="comedy">Comedy</label><br>
+        <input type="radio" id="drama" name="genre" value="drama">
+        <label for="drama">Drama</label><br><br>
+      </fieldset>    
+    </div>
+	  
     <button type="button" id="displayButton">Display Text</button>
   </form>
 
