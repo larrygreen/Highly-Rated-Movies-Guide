@@ -3,15 +3,10 @@
 <head>
   <title>Highly Rated Movies</title>
   <style>
-    .radio-container {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-}
-    .radio-group {
-    display: flex;
-    gap: 20px; /* Add some spacing */
-}	  
+    .radio-group-container {
+      display: flex;
+      gap: 20px; /* Adjust spacing as needed */
+     }	  
   </style>
 </head>	
 <body>
@@ -20,8 +15,8 @@
   <p style="text-align: center;">Find a movie with an IMDb rating of 7.5 or higher.</p>
   
   <form id="myForm">
-    <div class="radio-container">
-      <div class="radio-group">	    
+    <div class="radio-group-container">
+      <fieldset class="radio-group">	    
         <legend>Select a decade:</legend>
         <input type="radio" id="nineties" name="decade" value="nineties">
         <label for="nineties">1990-1999</label><br>
@@ -29,8 +24,8 @@
         <label for="two_thousands">2000-2009</label><br>
         <input type="radio" id="tens" name="decade" value="tens">
         <label for="tens">2010-2019</label><br><br>
-      </div>      
-      <div class="radio-group">
+      </fieldset>      
+      <fieldset class="radio-group">
         <legend>Select a genre:</legend>
         <input type="radio" id="action" name="genre" value="action">
         <label for="action">Action</label><br>
@@ -40,7 +35,7 @@
         <label for="comedy">Comedy</label><br>
         <input type="radio" id="drama" name="genre" value="drama">
         <label for="drama">Drama</label><br><br>
-      </div>    
+      </fieldset>    
     </div>
 	  
     <button type="button" id="displayButton">Display Text</button>
