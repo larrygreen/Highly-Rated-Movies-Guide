@@ -4,6 +4,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">	
   <title>Highly Rated Movies</title>
   <style>
+    .first-line-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Optional: Vertically center */
+      width: 100%; /* Or a specific width */
+     }
+
+    .left-element {
+      /* Styles for the left element */
+      text-align: left;
+     }
+
+    .center-element {
+      /* Styles for the centered element */
+      text-align: center;
+     }	  
     .radio-group-container {
       display: flex;
       gap: 20px; /* Adjust spacing as needed */
@@ -16,8 +32,12 @@
   </style>
 </head>	
 <body>
+
+  <div class="first-line-container">
+  	<div class="left-element"><a href="https://larrygreen.github.io">Return to Homepage</a></div>
+  	<div class="center-element"><h1>Highly Rated Movies Guide</h1></div>
+  </div>	
   
-  <h1 style="text-align: center;">Highly Rated Movies Guide</h1>
   <p style="text-align: center;">Find a movie with an IMDb rating of 7.5 or higher.</p>
   <form id="myForm">
     <div class="radio-group-container">
